@@ -181,6 +181,12 @@ let start=$(nowms)
 source $BIN_DIR/steps/pip-install
 mtime "pip.install.time" "${start}"
 
+# Support for Spacy corpora
+let start=$(nowms)
+sub-env $BIN_DIR/steps/spacy
+mtime "nltk.download.time" "${start}"
+
+
 # Uninstall removed dependencies with Pip.
 let start=$(nowms)
 source $BIN_DIR/steps/pip-uninstall
