@@ -20,7 +20,7 @@ cd .heroku
 python -m sputnik -h >/dev/null 2>&1
 if [ $? -eq 0 ]; then
     puts-step "Downloading spacy parser "
-    python -m spacy download en_core_web_md
+    python -m spacy download en_depent_web_md
 else
     puts-warn "spacy not apparently installed, not downloading parser"
 fi
